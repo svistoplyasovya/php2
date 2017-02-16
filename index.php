@@ -2,6 +2,8 @@
 
 require __DIR__ . '/autoload.php';
 
-$users = \App\Models\User::findAll();
-
-var_dump($users);
+$user = new \App\Models\User();
+$user->name = 'Vasya';
+$user->email = 'v@pupkin.ru';
+$user->insert();
+//var_dump($users);
